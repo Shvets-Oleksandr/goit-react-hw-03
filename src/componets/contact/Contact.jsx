@@ -1,14 +1,23 @@
 import css from './Contact.module.css';
 
-const Contact = ({ contact }) => {
+import { IoPersonSharp } from 'react-icons/io5';
+import { IoCall } from 'react-icons/io5';
+
+const Contact = ({ contact, onDelete }) => {
   return (
-    <div className={css.contactContainer}>
-      <ul>
-        <li>{contact.name}</li>
-        <li>{contact.number}</li>
+    <>
+      <ul className={css.dataContactList}>
+        <li>
+          <IoPersonSharp /> {contact.name}
+        </li>
+        <li>
+          <IoCall /> {contact.number}
+        </li>
       </ul>
-      <button type="button">Delete</button>
-    </div>
+      <button type="button" onClick={() => onDelete(contact.id)}>
+        Delete
+      </button>
+    </>
   );
 };
 

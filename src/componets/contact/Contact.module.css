@@ -1,6 +1,4 @@
-.contactContainer {
-  display: flex;
-  justify-content: space-between;
-  border-radius: 6px;
-  border: 2px solid black;
+.dataContactList {
+  list-style-type: none;
+  padding-left: 0;
 }
